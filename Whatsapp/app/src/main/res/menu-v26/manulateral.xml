@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view"
+    app:popupTheme="@style/MyLateralBarTheme">
+
+    <group
+        android:id="@+id/group_nav_counts"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_count"
+            android:icon="@drawable/icon_key"
+            android:iconTint="@color/green"
+            android:title="Cuenta"/>
+    </group>
+    <group
+        android:id="@+id/group_nav_chats"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_chats"
+            android:icon="@drawable/icon_chat"
+            android:iconTint="@color/green"
+            android:title="Chats"/>
+    </group>
+    <group
+        android:id="@+id/group_nav_noti"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_notificaction"
+            android:icon="@drawable/icon_notificaction"
+            android:iconTint="@color/green"
+            android:title="Notificaciones"/>
+    </group>
+    <group
+        android:id="@+id/group_nav_data"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_data"
+            android:icon="@drawable/icon_data"
+            android:iconTint="@color/green"
+            android:title="Uso de datos"/>
+    </group>
+    <group
+        android:id="@+id/group_nav_info"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_information"
+            android:icon="@drawable/icon_help"
+            android:iconTint="@color/green"
+            android:title="Informacion y ayuda"/>
+    </group>
+    <group
+        android:id="@+id/group_nav_contacs"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/icon_contacts"
+            android:iconTint="@color/green"
+            android:title="Contactos"/>
+    </group>
+
+
+
+
+
+
+</menu>

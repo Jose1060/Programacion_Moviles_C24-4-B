@@ -9,19 +9,21 @@
         android:icon="@drawable/icon_search"
         app:showAsAction="ifRoom"
         android:orderInCategory="1"/>
+
     <item android:id="@+id/message"
         android:title="Message"
         android:icon="@drawable/icon_chat"
         app:showAsAction="ifRoom"
         android:orderInCategory="2"/>
+
     <item android:id="@+id/config"
-        android:title="Ajustes"
+        android:title="Bloquear"
         app:showAsAction="never"
         android:orderInCategory="3"/>
+
     <item android:id="@+id/about"
-        android:title="About us..."
+        android:title="Destacar Mensajes"
         app:showAsAction="never"
         android:orderInCategory="4"/>
-
 
 </menu>

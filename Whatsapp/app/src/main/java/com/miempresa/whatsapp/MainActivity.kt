@@ -8,27 +8,30 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.navigation.NavigationView
+import com.miempresa.whatsapp.fragments.CameraFragment
+import com.miempresa.whatsapp.fragments.ChatFragment
+import com.miempresa.whatsapp.fragments.EstadoFragment
+import com.miempresa.whatsapp.fragments.LlamadasFragment
+import com.miempresa.whatsapp.fragments.adapters.ViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        lista.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
-        lista.layoutManager = LinearLayoutManager(this)
+        setUpTabs()
 
-        var llenarLista = ArrayList<Elementos>()
-        for (i in 1 until 20){
-            llenarLista.add(
-                Elementos("Elemento" + i, BitmapFactory.decodeResource(resources, R.drawable.imgfoto), "Mensaje" + i, BitmapFactory.decodeResource(resources, R.drawable.check)))
-        }
+        val navigationView: NavigationView = findViewById(R.id.nav_view)
+        navigationView.setNavigationItemSelectedListener(this)
 
-        val adapter = AdaptadorElementos(llenarLista)
-        lista.adapter = adapter
+        setSupportActionBar(findViewById(R.id.mitoolbar))
 
-        registerForContextMenu(lista)
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -54,6 +57,29 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Puedes decirme que estas buscando", Toast.LENGTH_LONG).show()
             return true
         }
+        if (id == R.id.home){
+            Toast.makeText(this, "Marcado Home", Toast.LENGTH_LONG).show()
+            return true
+        }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.nav_chats -> Toast.makeText(this, "Elegiste menu chats", Toast.LENGTH_SHORT).show()
+        }
+        return true
+    }
+
+    private fun setUpTabs(){
+        val adapter = ViewPagerAdapter(supportFragmentManager)
+        adapter.addFragment(CameraFragment(), "")
+        adapter.addFragment(ChatFragment(), "Chats")
+        adapter.addFragment(EstadoFragment(), "Estados")
+        adapter.addFragment(LlamadasFragment(), "Llamadas")
+        viewPager.adapter = adapter
+        tab_layout.setupWithViewPager(viewPager)
+
+        tab_layout.getTabAt(0)!!.setIcon(R.drawable.icono_camera)
     }
 }
