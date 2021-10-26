@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\tareas\\Programacion_Moviles\\Lab01\\Widget_Tarea\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "E:\\tareas\\Programacion_Moviles\\Lab01\\Widget_Tarea\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\tareas\\Programacion_Moviles\\Lab01\\Widget_Tarea\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_datos.xml",
+        "source": "E:\\tareas\\Programacion_Moviles\\Lab01\\Widget_Tarea\\app\\src\\main\\res\\layout\\activity_datos.xml"
+    },
+    {
+        "merged": "E:\\tareas\\Programacion_Moviles\\Lab01\\Widget_Tarea\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\wid_tarea.xml",
+        "source": "E:\\tareas\\Programacion_Moviles\\Lab01\\Widget_Tarea\\app\\src\\main\\res\\layout\\wid_tarea.xml"
+    }
+]

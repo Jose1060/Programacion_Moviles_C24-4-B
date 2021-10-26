@@ -1,0 +1,8 @@
+com/miempresa/widget_tarea/BuildConfig.java
+ com.miempresa.widget_tarea.BuildConfig
+com/miempresa/widget_tarea/databinding/WidTareaBinding.java
+ com.miempresa.widget_tarea.databinding.WidTareaBinding
+com/miempresa/widget_tarea/databinding/ActivityDatosBinding.java
+ com.miempresa.widget_tarea.databinding.ActivityDatosBinding
+com/miempresa/widget_tarea/databinding/ActivityMainBinding.java
+ com.miempresa.widget_tarea.databinding.ActivityMainBinding
